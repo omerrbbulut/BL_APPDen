@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp.sp
+"bl_appden\startup_stm32f407xx.o"
+"bl_appden\app_jump.o"
+"bl_appden\main.o"
+"bl_appden\gpio.o"
+"bl_appden\stm32f4xx_it.o"
+"bl_appden\stm32f4xx_hal_msp.o"
+"bl_appden\stm32f4xx_hal_tim.o"
+"bl_appden\stm32f4xx_hal_tim_ex.o"
+"bl_appden\stm32f4xx_hal_rcc.o"
+"bl_appden\stm32f4xx_hal_rcc_ex.o"
+"bl_appden\stm32f4xx_hal_flash.o"
+"bl_appden\stm32f4xx_hal_flash_ex.o"
+"bl_appden\stm32f4xx_hal_flash_ramfunc.o"
+"bl_appden\stm32f4xx_hal_gpio.o"
+"bl_appden\stm32f4xx_hal_dma_ex.o"
+"bl_appden\stm32f4xx_hal_dma.o"
+"bl_appden\stm32f4xx_hal_pwr.o"
+"bl_appden\stm32f4xx_hal_pwr_ex.o"
+"bl_appden\stm32f4xx_hal_cortex.o"
+"bl_appden\stm32f4xx_hal.o"
+"bl_appden\stm32f4xx_hal_exti.o"
+"bl_appden\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "BL_APPDen\BL_APPDen.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "BL_APPDen.map" -o BL_APPDen\BL_APPDen.axf
